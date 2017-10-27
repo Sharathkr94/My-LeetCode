@@ -1,4 +1,8 @@
 /**
+ *@Author:Sharath
+ */
+
+/**
  * Definition for singly-linked list.
  * struct ListNode {
  *     int val;
@@ -16,16 +20,20 @@ public:
         curr = head;
         prev = NULL;
         next = NULL;
+        
+        //empty list
         if (head == NULL)
         {
             return NULL;
         }
         
+        //only one node in list
         if (head->next == NULL)
         {
             return head;
         }
         
+        //default case
         while (curr != NULL)
         {
             next = curr->next;
