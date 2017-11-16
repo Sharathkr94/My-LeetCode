@@ -2,8 +2,20 @@ int strStr(char* haystack, char* needle) {
     int lengthHay = strlen(haystack), lengthNeedle = strlen(needle);
     int i,j;
     
-    if (lengthHay == 0 || lengthNeedle == 0)
+    if (lengthHay == 0 && lengthNeedle == 0)
+    {
+        return 0;
+    }
+    
+    else if (lengthHay && lengthNeedle == 0)
+    {
+        return 0;
+    }
+    
+    else if (lengthHay == 0 && lengthNeedle != 0)
+    {
         return -1;
+    }
     
     for(i = 0; i < lengthHay; i++){
         if(haystack[i] == needle[0]){
