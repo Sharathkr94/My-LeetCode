@@ -2,7 +2,7 @@
 
 int pow2(int n)
 {
-	if(n & n - 1)
+	if(n && !(n & n - 1))
 	{
 		return 1;
 	}
